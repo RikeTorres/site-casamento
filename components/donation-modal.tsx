@@ -149,7 +149,7 @@ export default function DonationModal({ campaign, open, onClose }: Props) {
           {pixData && (
             <div className="rounded-2xl border border-stone-200 bg-stone-50 p-4">
               <div className="mb-3 rounded-xl bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
-                Pix gerado com sucesso. Após a confirmação do pagamento, a barra da campanha será atualizada automaticamente.
+                Pix gerado com sucesso. Após a confirmação do pagamento, a barra da campanha será atualizada automaticamente. Apenas feche está aba.
               </div>
 
               <img
