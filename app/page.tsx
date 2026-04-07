@@ -63,7 +63,7 @@ export default function Home() {
 
           <p className="mt-5 text-base leading-7 text-stone-600 md:text-lg">
             Criamos algumas campanhas especiais para que vocês, nossos amigos e familiares, possam
-            nos ajudar com qualquer valor naquele projeto que mais se indentifica.
+            nos ajudar com qualquer valor naquele projeto que mais se indentificarem.
           </p>
         </div>
 
