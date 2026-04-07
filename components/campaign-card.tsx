@@ -33,20 +33,25 @@ export default function CampaignCard({ campaign }: Props) {
           )}
         </div>
 
-        <div className="space-y-2">
-          <div className="text-right text-sm text-stone-500">
-            {percentage >= 100
-              ? 'Meta atingida 🎉'
-              : `${Math.min(percentage, 100).toFixed(0)}% da meta`}
+        <div className="space-y-4 p-5">
+          <div>
+            <h2 className="text-xl font-semibold text-stone-900">
+              {campaign.titulo}
+            </h2>
+
+            <p className="mt-1 text-sm text-stone-600">
+              R$ {campaign.valor_arrecadado} de R$ {campaign.valor_meta} arrecadados.
+            </p>
           </div>
 
-          <div className="h-5 w-full overflow-hidden rounded-full bg-stone-200 shadow-inner">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-700 ease-out"
-              style={{ width: `${Math.min(percentage, 100)}%` }}
-            />
+          <div>
+            <div className="h-5 w-full rounded-full bg-stone-200 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-emerald-500 transition-all duration-700 ease-out"
+                style={{ width: `${Math.min(percentage, 100)}%` }}
+              />
+            </div>
           </div>
-        </div>
 
           <button
             onClick={() => setOpen(true)}
@@ -55,6 +60,7 @@ export default function CampaignCard({ campaign }: Props) {
             Presentear via Pix
           </button>
         </div>
+      </div>
 
       <DonationModal
         campaign={campaign}
