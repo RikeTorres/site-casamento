@@ -85,7 +85,7 @@ export default function DonationModal({ campaign, open, onClose }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
-      <div className="relative w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl">
+      <div className="relative w-full max-w-md max-h-[90vh] overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl">
         <button
           onClick={onClose}
           className="absolute right-4 top-4 rounded-full p-2 text-stone-500 transition hover:bg-stone-100"
@@ -155,13 +155,14 @@ export default function DonationModal({ campaign, open, onClose }: Props) {
               <img
                 src={`data:image/png;base64,${pixData.qrCodeBase64}`}
                 alt="QR Code Pix"
-                className="mx-auto h-56 w-56 rounded-xl bg-white p-2"
+                className="mx-auto w-full max-w-[220px] rounded-xl bg-white p-2"
               />
 
               <textarea
                 readOnly
                 value={pixData.copiaECola}
-                className="mt-4 min-h-[110px] w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 text-sm text-stone-800 outline-none"
+                className="mt-4 w-full rounded-2xl border border-stone-300 bg-white px-4 py-3 text-sm text-stone-800 outline-none break-all"
+                rows={4}
               />
 
               <button
