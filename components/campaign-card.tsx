@@ -52,12 +52,6 @@ export default function CampaignCard({ campaign }: Props) {
               />
             </div>
 
-            <div className="h-3 w-full rounded-full bg-stone-200">
-              <div
-                className="h-3 rounded-full bg-emerald-500 transition-all duration-500"
-                style={{ width: `${Math.min(percentage, 100)}%` }}
-              />
-            </div>
           </div>
 
           <button
