@@ -45,9 +45,9 @@ export default function CampaignCard({ campaign }: Props) {
           </div>
 
           <div>
-            <div className="h-3 w-full rounded-full bg-stone-200">
+            <div className="h-5 w-full rounded-full bg-stone-200 overflow-hidden">
               <div
-                className="h-3 rounded-full bg-emerald-500 transition-all duration-700 ease-out"
+                className="h-full rounded-full bg-emerald-500 transition-all duration-700 ease-out"
                 style={{ width: `${Math.min(percentage, 100)}%` }}
               />
             </div>
